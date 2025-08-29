@@ -151,6 +151,7 @@ function validateEntryDetails(entryDetails: EntryDetails): boolean {
         entryDetails.type !== undefined &&
         entryDetails.description !== undefined &&
         entryDetails.exploit !== undefined &&
+        entryDetails.version !== undefined &&
         entryDetails.recommendation !== undefined
     );
 }
@@ -164,6 +165,7 @@ export interface EntryDetails {
     type: string;
     description: string;
     exploit: string;
+    version: string;
     recommendation: string;
 }
 
@@ -178,6 +180,7 @@ export function createDefaultEntryDetails(): EntryDetails {
         type: "",
         description: "",
         exploit: "",
+        version: "",
         recommendation: "",
     };
 }

@@ -66,6 +66,7 @@ class FindingDetailsProvider implements vscode.WebviewViewProvider {
                 type: entry.type,
                 description: entry.description,
                 exploit: entry.exploit,
+                version: entry.version,
                 recommendation: entry.recommendation,
                 title: title,
             });
@@ -117,6 +118,10 @@ class FindingDetailsProvider implements vscode.WebviewViewProvider {
     <div class="detailsDiv">
         <span class="detailSpan">Title:</span>
         <vscode-text-field id="label-area"></vscode-text-field>
+    </div>
+    <div class="detailsDiv">
+        <span class="detailSpan">Version:</span>
+        <vscode-text-field id="version-area"></vscode-text-field>
     </div>
 
     <div class="detailsDiv">

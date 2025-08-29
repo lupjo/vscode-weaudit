@@ -23,6 +23,9 @@ function main(): void {
     const titleField = document.getElementById("label-area") as TextField;
     titleField?.addEventListener("change", handlePersistentFieldChange);
 
+    const versionField = document.getElementById("version-area") as TextField;
+    versionField?.addEventListener("change", handlePersistentFieldChange);
+
     const severityDropdown = document.getElementById("severity-dropdown") as Dropdown;
     severityDropdown?.addEventListener("change", handlePersistentFieldChange);
 
@@ -63,6 +66,7 @@ function main(): void {
             case "set-finding-details":
                 containerDiv.style.display = "block";
                 titleField.value = message.title;
+                versionField.value = message.version;
                 severityDropdown.value = message.severity;
                 difficultyDropdown.value = message.difficulty;
                 typeDropdown.value = message.type;

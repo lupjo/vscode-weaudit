@@ -2321,6 +2321,9 @@ export class CodeMarker implements vscode.TreeDataProvider<TreeEntry> {
             case "exploit":
                 entry.details.exploit = value;
                 break;
+            case "version":
+                entry.details.version = value;
+                break;
             case "recommendation":
                 entry.details.recommendation = value;
                 break;
@@ -2871,6 +2874,7 @@ export class CodeMarker implements vscode.TreeDataProvider<TreeEntry> {
                     "difficulty": entry.details.difficulty,
                     "type": entry.details.type,
                     "exploit": entry.details.exploit,
+                    "version": entry.details.version,
                     "recommendation": entry.details.recommendation,
                     "severity":entry.details.severity,
                     "location": all_locations,
