@@ -2923,6 +2923,9 @@ export class CodeMarker implements vscode.TreeDataProvider<TreeEntry> {
 
         this.updateSavedData(removed.author);
         this.refreshAndDecorateEntry(removed);
+        if (entry.locations.length == 0) {
+            this.refreshTree();
+        }
     }
 
     /**
